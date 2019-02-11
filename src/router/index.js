@@ -10,6 +10,8 @@ import broadcastView from '../view/broadcastView'
 import statusView from '../view/statusView'
 import DetailView from '../view/DetailView'
 import registerView from '../view/registerView'
+import loginView from '../view/loginView'
+import SubjectView from '../view/SubjectView'
 
 Vue.use(Router)
 
@@ -54,6 +56,10 @@ export default new Router({
           path: 'detail',
           name: 'DetailView',
           component: DetailView
+        }, {
+          path: ':classify/subject/:id',
+          name: 'SubjectView',
+          component: SubjectView
         }
       ]
     },
@@ -61,6 +67,11 @@ export default new Router({
       path: '/register',
       name: 'registerView',
       component: registerView
+    },
+    {
+      path: '/login',
+      name: 'loginView',
+      component: loginView
     }
   ]
 })

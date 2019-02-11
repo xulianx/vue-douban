@@ -42,13 +42,17 @@
       <h2>活动详情</h2>
       <div v-if="eventItem.content" class="content" v-html="content"></div>
     </div>
+    <download-app></download-app>
   </div>
 </template>
 
 <script>
     import { mapState } from 'vuex'
+    import downloadApp from '../component/downloadApp'
+
     export default {
       name: 'DetailView',
+      components: { downloadApp },
       data () {
         return {
         }

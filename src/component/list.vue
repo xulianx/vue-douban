@@ -3,7 +3,7 @@
       <template v-for="item in items">
         <router-link
           class="thumbnail"
-          :to="{name: 'DetailView', params: { id: item.id }}">
+          :to="{name: 'DetailView', params: { id: item.id }, activeClass: 'bottom-nav-active'}">
           <div class="content">
             <img :src="item.image_hlarge" alt="cover">
             <h3>{{item.title}}</h3>
